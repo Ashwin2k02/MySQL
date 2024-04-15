@@ -286,11 +286,11 @@ select u.*, c.* from User u left join Courier c on u.Name = c.SenderName or u.Na
 
 -- 34. Retrieve a list of all couriers and their corresponding services, including cases where there are no matches on either side
 
-select c.*, cs.* from Courier c left join CourierServices cs on c.CourierID = cs.CourierID;
+select c.*, cs.servicename,cs.cost from Courier c left join CourierServices cs on c.ServiceID = cs.ServiceID;
 
 -- 35. Retrieve a list of all employees and their corresponding payments, including cases where there are no matches on either side
 
-select e.*, p.* from emloyee e left join Paymentdetails p on e.EmployeeID = p.EmployeeID;
+select e.*, p.amount from employee e left join Paymentdetails p on e.PaymentID = p.PaymentID;
 
 -- 36. List all users and all courier services, showing all possible combinations.
 
