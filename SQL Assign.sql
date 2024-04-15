@@ -290,7 +290,7 @@ select c.*, cs.* from Courier c left join CourierServices cs on c.CourierID = cs
 
 -- 35. Retrieve a list of all employees and their corresponding payments, including cases where there are no matches on either side
 
-select e.*, p.* from emloyee e left join Payment p on e.EmployeeID = p.EmployeeID;
+select e.*, p.* from emloyee e left join Paymentdetails p on e.EmployeeID = p.EmployeeID;
 
 -- 36. List all users and all courier services, showing all possible combinations.
 
