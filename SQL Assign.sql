@@ -166,7 +166,7 @@ select * from emp where status='out for delivery';
 
 -- 8. List all packages with a specific status:
 
-select * from couriers status where status='In transit';
+select * from couriers where status='In transit';
 
 -- 9. Calculate the total number of packages for each courier.
 
@@ -362,11 +362,11 @@ select sum(Cost) as TotalCost from CourierServices where Cost < (select max(Cost
 
 -- 52. Find all couriers that have been paid for
 
-select distinct c.* from Courier c join Payment p on c.CourierID = p.CourierID;
+select distinct c.* from Courier c join Paymentdetails p on c.CourierID = p.CourierID;
 
 -- 53. Find the locations where the maximum payment amount was made
 
-select l.* from Location l join Payment p on l.LocationID = p.LocationID where Amount = (select max(Amount) from Payment);
+select l.* from Location l join Paymentdetails p on l.LocationID = p.LocationID where Amount = (select max(Amount) from Paymentdetails);
 
 -- 54. Find all couriers whose weight is greater than the weight of all couriers sent by a specific sender(e.g., 'SenderName'):
 
