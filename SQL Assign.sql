@@ -186,7 +186,7 @@ select * from couriers where weight between 1 and 3;
 
 -- 12. Retrieve employees whose names contain 'John'
 
-select * from employee where name='John';
+select * from employee where name like '%John%';
 
 -- 13. Retrieve all courier records with payments greater than $50.
 
