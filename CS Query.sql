@@ -121,3 +121,19 @@ update artwork set artistid = 202 where artworkid = 2;
 update artwork set artistid = 303 where artworkid = 3;
 update artwork set artistid = 404 where artworkid = 4;
 update artwork set artistid = 505 where artworkid = 5;
+update artwork set artistid = 202 where artworkid = 2;
+update artwork set artistid = 202 where artworkid = 2;
+
+
+insert into User (UserID, Username, Password, Email, FirstName, LastName, DateOfBirth, ProfilePicture, FavouriteArtworks)
+values
+    (456456, 'artlover987', 'password123', 'artlover@example.com', 'Steve', 'Smith', '2000-01-15', 'https://example.com/prof_picture.jpg', '1,2,4'),
+    (963963, 'creative_mind', 'lethimcook', 'creativemind@example.com', 'Steve', 'Rogers', '1999-07-20', 'https://example.co.in/creative.jpg', '3');
+
+
+insert into User_Favorite_Artwork (UserID, ArtworkID)
+values
+    (456456, 1),
+    (456456, 2),
+    (456456, 4),
+    (963963, 3);
